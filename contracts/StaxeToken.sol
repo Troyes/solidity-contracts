@@ -2,7 +2,7 @@ pragma solidity ^0.4.18;
 
 import 'zeppelin-solidity/contracts/token/ERC20/MintableToken.sol';
 
-contract TokenReceiverInterface {
+interface TokenReceiver {
     function receiveApproval(address s, uint256 v, address r, bytes e) public returns (bool);
 }
 
@@ -19,6 +19,6 @@ contract StaxeToken is MintableToken {
 
     function approveAndCall(address _spender, uint256 _value, bytes _extraData) public {
         require(approve(_spender, _value));
-        require(TokenReceiverInterface(_spender).receiveApproval(msg.sender, _value, this, _extraData));
+        require(TokenReceiver(_spender).receiveApproval(msg.sender, _value, this, _extraData));
     }
 }

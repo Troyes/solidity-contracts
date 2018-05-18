@@ -1,7 +1,10 @@
 pragma solidity ^0.4.18;
 
-import './StaxeToken.sol';
 import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
+
+interface StaxeToken {
+    function transferFrom(address from, address to, uint256 value) public returns (bool);
+}
 
 contract StaxeSale is Ownable {
     StaxeToken public token;
