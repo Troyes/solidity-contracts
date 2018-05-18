@@ -1,5 +1,23 @@
 # Staxe Solidity Contracts
 
+## Roadmap
+
+#### 1. Functionality
+
+* tickets
+* distribution
+
+#### 2. Performance
+
+* execution
+* gas
+* scalability
+
+#### 3. Security
+
+* best practices
+* 3rd party audits 
+
 ## Build
 
 ### Windows
