@@ -1,4 +1,5 @@
 # Staxe Solidity Contracts
+[![CircleCI](https://circleci.com/gh/staxe/contracts/tree/master.svg?style=shield)](https://circleci.com/gh/staxe/contracts/tree/master)
 
 ## Roadmap
 
