@@ -1,5 +1,7 @@
 # Staxe Solidity Contracts
-[![CircleCI](https://circleci.com/gh/staxe/contracts/tree/master.svg?style=shield)](https://circleci.com/gh/staxe/contracts/tree/master)
+[![CircleCI](https://circleci.com/gh/staxe/solidity-contracts/tree/master.svg?style=shield)](https://circleci.com/gh/staxe/solidity-contracts/tree/master)
+![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+
 
 ## Roadmap
 
