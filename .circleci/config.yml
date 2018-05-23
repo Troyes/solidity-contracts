@@ -48,9 +48,6 @@ jobs:
       
       - store_test_results:
           path: ~/
-
-      - store_artifacts:
-          path: ~/build/contracts
       
       - persist_to_workspace:
           root: ./
@@ -78,6 +75,9 @@ jobs:
             echo New Platform Contract: ${PLATFORM_CONTRACT}
             curl -X POST --header 'Content-Type: application/json' -d "{\"name\":\"PLATFORM_CONTRACT_ADDRESS\", \"value\":\"${PLATFORM_CONTRACT}\"}" $CI_API_URL
             curl -X POST --header 'Content-Type: application/json' -d "{\"name\":\"TOKEN_CONTRACT_ADDRESS\", \"value\":\"${TOKEN_CONTRACT}\"}" $CI_API_URL
+
+      - store_artifacts:
+          path: ~/build/contracts
     
 workflows:
   version: 2
