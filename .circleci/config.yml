@@ -74,8 +74,10 @@ jobs:
           command: |
             TOKEN_CONTRACT=$(grep StaxeToken: deploy.info | awk '{printf $2}')
             PLATFORM_CONTRACT=$(grep StaxePlatform: deploy.info | awk '{printf $2}')
-            curl -X POST --header 'Content-Type: application/json' -d '{"name":"PLATFORM_CONTRACT_ADDRESS", "value":"$PLATFORM_CONTRACT"}' $CI_API_URL
-            curl -X POST --header 'Content-Type: application/json' -d '{"name":"TOKEN_CONTRACT_ADDRESS", "value":"$TOKEN_CONTRACT"}' $CI_API_URL
+            echo New Token Contract: ${TOKEN_CONTRACT}
+            echo New Platform Contract: ${PLATFORM_CONTRACT}
+            curl -X POST --header 'Content-Type: application/json' -d "{\"name\":\"PLATFORM_CONTRACT_ADDRESS\", \"value\":\"${PLATFORM_CONTRACT}\"}" $CI_API_URL
+            curl -X POST --header 'Content-Type: application/json' -d "{\"name\":\"TOKEN_CONTRACT_ADDRESS\", \"value\":\"${TOKEN_CONTRACT}\"}" $CI_API_URL
     
 workflows:
   version: 2
