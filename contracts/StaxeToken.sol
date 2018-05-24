@@ -10,7 +10,7 @@ contract StaxeToken is MintableToken {
     string public constant name = "StaxeToken";
     string public constant symbol = "STXE";
     uint8 public constant decimals = 18;
-    uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
+    uint256 public constant INITIAL_SUPPLY = 10000000 * (10 ** uint256(decimals));
 
     function StaxeToken() public {
         totalSupply_ = INITIAL_SUPPLY;
