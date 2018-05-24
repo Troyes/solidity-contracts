@@ -7,7 +7,7 @@
 
 #### 1. Functionality
 
-* tickets
+* tickets - validations
 * distribution
 
 #### 2. Performance
